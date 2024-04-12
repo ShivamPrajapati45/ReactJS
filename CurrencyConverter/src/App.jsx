@@ -45,7 +45,8 @@ function App() {
               <i className="text-black fa-solid fa-arrow-right-arrow-left bg-white rounded-full p-3 hover:bg-gray-200" onClick={swap} ></i>
           </div>
           <Input
-          flag={to.slice(0,2)}
+            convert="Converted"
+            flag={to.slice(0,2)}
             label = "TO"
             currency = {to}
             amount = {convertAmt}

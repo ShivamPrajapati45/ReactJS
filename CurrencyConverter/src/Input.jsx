@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Input({flag,amount,label,onAmountChange,currency = 'inr',onCurrencyChange,currencyOptions = [],amountDisabled = false}) {
+function Input({convert,flag,amount,label,onAmountChange,currency = 'inr',onCurrencyChange,currencyOptions = [],amountDisabled = false}) {
     return (
     <>
         <div className=' w-full h-48 flex items-center justify-between px-2'>
@@ -17,7 +17,7 @@ function Input({flag,amount,label,onAmountChange,currency = 'inr',onCurrencyChan
                 </div>
             </div>
             <div className='flex flex-col w-1/2 h-2/3 justify-between items-end'>
-                <span className='font-mono text-2xl font-semibold text-gray-200 '>Amount</span>
+                <span className='font-mono text-2xl font-semibold text-gray-200 '>{convert} Amount</span>
                 <input type="number" className='px-1 py-3 outline-none bg-gray-100 text-center font-semibold text-lg rounded-lg' value={amount} onChange={(e)=> onAmountChange(Number(e.target.value))} disabled = {amountDisabled} />
             </div>
         </div>
