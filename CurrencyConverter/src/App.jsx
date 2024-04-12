@@ -27,11 +27,11 @@ function App() {
 
   return (
     <>
-    <div className='w-full h-8 flex justify-center my-3 fixed'>
-      <span className=' font-semibold text-3xl font-mono underline'>Currency Converter</span>
+    <div className='w-full flex justify-center my-3 fixed'>
+      <span className=' font-semibold text-4xl text-white font-mono underline'>Currency Converter</span>
     </div>
-      <div className='w-full h-screen border flex justify-center flex-col  items-center'>
-        <form className='w-1/2 h-3/4 border-2 border-black px-1 bg-[#121212]' onSubmit={(e)=> {e.preventDefault(), result()}}>
+      <div className='w-full h-screen flex justify-center flex-col  items-center bg-[#436789]'>
+        <form className='w-1/2 h-3/4 border-2 border-white rounded-lg px-1 bg-[#121212]' onSubmit={(e)=> {e.preventDefault(), result()}}>
           <Input
             flag={from.slice(0,2)}
             label = "From" 
@@ -52,11 +52,12 @@ function App() {
             onAmountChange = {(e)=> setConvertAmt(e)}
             onCurrencyChange = {(e)=>setTo(e)}
             currencyOptions = {currencyKeys}
+            amountDisabled
 
 
           />
           <div className='flex w-full h-12 items-center justify-center'>
-            <button className='bg-green-400 px-4 py-2 rounded-lg hover:cursor-pointer hover:bg-green-300 text-black text-lg font-semibold'>CONVERT {from.toUpperCase()} to {to.toUpperCase()}</button>
+            <button className='bg-green-400 px-4 py-2 rounded-lg hover:cursor-pointer outline-none hover:bg-green-300 text-black text-lg font-semibold'>CONVERT {from.toUpperCase()} to {to.toUpperCase()}</button>
           </div>
         </form>
       </div>
